@@ -1,4 +1,4 @@
-SELECT category.name AS category,COUNT(rental.rental_date) AS count,SUM(payment.amount) AS sales
+SELECT category.name AS category,count(rental.rental_date) AS count,sum(payment.amount) AS sales
 FROM rental
 JOIN inventory ON inventory.inventory_id=rental.inventory_id
 JOIN film ON film.film_id=inventory.film_id

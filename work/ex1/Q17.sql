@@ -1,4 +1,4 @@
-SELECT category.name AS category, AVG(EXTRACT(day FROM rental.return_date - rental.rental_date)) AS rentaldays_ave
+SELECT category.name AS category, avg(EXTRACT(day FROM rental.return_date - rental.rental_date)) AS rentaldays_ave
 FROM rental
 JOIN inventory ON inventory.inventory_id=rental.inventory_id
 JOIN film ON film.film_id=inventory.film_id

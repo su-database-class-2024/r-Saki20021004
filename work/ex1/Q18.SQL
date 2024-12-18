@@ -1,4 +1,4 @@
-SELECT country.country AS country,COUNT(customer.customer_id),SUM(payment.amount) AS sales_sum
+SELECT country.country AS country,count(customer.customer_id),sum(payment.amount) AS sales_sum
 FROM rental
 JOIN customer ON rental.customer_id=customer.customer_id
 JOIN address ON customer.address_id=address.address_id
